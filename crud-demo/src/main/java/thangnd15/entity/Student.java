@@ -36,36 +36,45 @@ public class Student {
 		this.lastName = last_name;
 		this.age = age;
 	}
-	
+
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getFirst_name() {
+
+	public String getFirstName() {
 		return firstName;
 	}
-	public void setFirst_name(String first_name) {
-		this.firstName = first_name;
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
-	public String getLast_name() {
+
+	public String getLastName() {
 		return lastName;
 	}
-	public void setLast_name(String last_name) {
-		this.lastName = last_name;
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
+
 	public int getAge() {
 		return age;
 	}
+
 	public void setAge(int age) {
 		this.age = age;
 	}
-	public Integer getSchool_id() {
+
+	public Integer getSchoolId() {
 		return schoolId;
 	}
-	public void setSchool_id(Integer school_id) {
-		this.schoolId = school_id;
+
+	public void setSchoolId(Integer schoolId) {
+		this.schoolId = schoolId;
 	}
 	
 }

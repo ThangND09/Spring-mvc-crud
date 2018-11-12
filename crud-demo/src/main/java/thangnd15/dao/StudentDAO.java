@@ -5,5 +5,5 @@ import java.util.List;
 import thangnd15.entity.Student;
 
 public interface StudentDAO {
-	public Student getStudent();
+	public List<Student> getStudent();
 }

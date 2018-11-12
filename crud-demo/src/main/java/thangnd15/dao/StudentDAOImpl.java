@@ -2,7 +2,6 @@ package thangnd15.dao;
 
 import java.util.List;
 
-
 import javax.transaction.Transactional;
 
 import org.hibernate.Session;
@@ -20,20 +19,20 @@ public class StudentDAOImpl implements StudentDAO{
 	private SessionFactory sessionFactory;
 
 	@Transactional
-	public Student getStudent() {
+	public List<Student> getStudent() {
 		Session currentSession = sessionFactory.getCurrentSession();
 		
 		// create a query
-//		Query<Student> theQuery = 
-//				currentSession.createQuery("from thangnd15_database.student", Student.class);
+		Query<Student> theQuery = 
+				currentSession.createQuery("from Student", Student.class);
 		
-		Student student = currentSession.get(Student.class, 35);
+//		Student student = currentSession.get(Student.class, 35);
 		
 		// execute query and get result list
-		//List<Student> students = theQuery.getResultList();
+		List<Student> students = theQuery.getResultList();
 				
 		// return the results		
-		return student;
+		return students;
 	}
 	
 }

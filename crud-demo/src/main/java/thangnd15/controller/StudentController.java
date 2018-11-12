@@ -8,7 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import thangnd15.dao.StudentDAO;
-import thangnd15.dao.StudentDAOImpl;
 import thangnd15.entity.Student;
 
 @Controller
@@ -21,7 +20,7 @@ public class StudentController {
 	@RequestMapping("/list")
 	public String getStudent(Model model) {
 		
-		Student students = studentDAOImpl.getStudent();
+		List<Student> students = studentDAOImpl.getStudent();
 		
 		model.addAttribute("students", students);
 		
