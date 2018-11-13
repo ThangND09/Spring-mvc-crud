@@ -9,6 +9,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<input type="button" value="Add Customer"
+				   onclick="window.location.href='showFormForStudent'; return false;"
+				   class="add-button"/>
 	<table>
 		<tr>
 			<th>First Name</th>

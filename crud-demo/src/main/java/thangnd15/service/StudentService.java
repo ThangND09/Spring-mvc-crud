@@ -1,11 +1,12 @@
-package thangnd15.dao;
+package thangnd15.service;
 
 import java.util.List;
 
 import thangnd15.entity.Student;
 
-public interface StudentDAO {
-	public List<Student> getStudent();
+public interface StudentService {
+	
+	public List<Student> getStudentList();
 
 	public boolean saveStudent(Student student);
 }

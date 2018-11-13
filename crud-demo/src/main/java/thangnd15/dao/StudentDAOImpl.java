@@ -18,7 +18,6 @@ public class StudentDAOImpl implements StudentDAO{
 	@Autowired
 	private SessionFactory sessionFactory;
 
-	@Transactional
 	public List<Student> getStudent() {
 		Session currentSession = sessionFactory.getCurrentSession();
 		
@@ -33,6 +32,17 @@ public class StudentDAOImpl implements StudentDAO{
 				
 		// return the results		
 		return students;
+	}
+
+	public boolean saveStudent(Student student) {
+		// TODO Auto-generated method stub
+		
+		Session currentSession = sessionFactory.getCurrentSession();
+		
+		// create a query
+		Integer id = (Integer) currentSession.save(student);
+		
+		return id > 0 ? true : false;
 	}
 	
 }
